@@ -6,18 +6,20 @@
 /*   By: obednaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 20:04:34 by obednaou          #+#    #+#             */
-/*   Updated: 2022/10/09 13:52:51 by obednaou         ###   ########.fr       */
+/*   Updated: 2022/10/12 13:44:48 by obednaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
 	while (*(s + i))
 	{
-		if (*(s + i) == (unsigned char)c)
+		if (*(s + i) == (char)c)
 			return ((char *)s + i);
 		i++;
 	}

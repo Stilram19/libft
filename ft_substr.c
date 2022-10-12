@@ -6,7 +6,7 @@
 /*   By: obednaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 18:30:03 by obednaou          #+#    #+#             */
-/*   Updated: 2022/10/09 08:51:39 by obednaou         ###   ########.fr       */
+/*   Updated: 2022/10/11 20:24:11 by obednaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int		i;
+	size_t	i;
 	char	*substr;
 
 	i = 0;

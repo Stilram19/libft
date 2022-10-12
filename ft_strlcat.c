@@ -6,7 +6,7 @@
 /*   By: obednaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 17:43:55 by obednaou          #+#    #+#             */
-/*   Updated: 2022/10/08 08:33:41 by obednaou         ###   ########.fr       */
+/*   Updated: 2022/10/12 08:24:23 by obednaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 	size_t	i;
 	size_t	j;
 
+	if (!dstsize)
+		return (dstsize + ft_strlen(src));
 	j = 0;
 	i = ft_strlen(dest);
 	if (dstsize <= i)
@@ -26,6 +28,6 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 		*(dest + i + j) = *(src + j);
 		j++;
 	}
-	*(dest + i + j) = '\0';
+	*(dest + i + j) = 0;
 	return (i + ft_strlen(src));
 }
