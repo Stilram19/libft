@@ -6,22 +6,11 @@
 /*   By: obednaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 09:25:49 by obednaou          #+#    #+#             */
-/*   Updated: 2022/10/10 13:25:53 by obednaou         ###   ########.fr       */
+/*   Updated: 2022/10/12 14:48:49 by obednaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (*(str + i))
-		i++;
-	return (i);
-}
 
 static int	ft_is_it_in_set(char const *set, char c)
 {
@@ -64,6 +53,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 	char	*ret;
 
+	if (!(s1 && set))
+		return (0);
 	i = 0;
 	start = ft_first_proper_char(s1, set);
 	end = ft_last_proper_char(s1, set);

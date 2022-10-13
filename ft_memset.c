@@ -6,7 +6,7 @@
 /*   By: obednaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:49:39 by obednaou          #+#    #+#             */
-/*   Updated: 2022/10/11 17:57:21 by obednaou         ###   ########.fr       */
+/*   Updated: 2022/10/12 15:07:46 by obednaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,3 @@ void	*ft_memset(void *dest, int c, size_t count)
 	}
 	return (dest);
 }
-
-

@@ -6,7 +6,7 @@
 /*   By: obednaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 16:16:03 by obednaou          #+#    #+#             */
-/*   Updated: 2022/10/09 16:23:36 by obednaou         ###   ########.fr       */
+/*   Updated: 2022/10/12 14:52:00 by obednaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	size_t	i;
 
 	i = 0;
+	if (!s)
+		return ;
 	while (*(s + i))
 	{
 		(*f)(i, s + i);

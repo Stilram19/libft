@@ -6,7 +6,7 @@
 /*   By: obednaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 11:07:47 by obednaou          #+#    #+#             */
-/*   Updated: 2022/10/11 14:04:13 by obednaou         ###   ########.fr       */
+/*   Updated: 2022/10/12 14:49:34 by obednaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char	**ft_split(char const *s, char c)
 	j = 0;
 	buff = ft_arrlen(s, c) + 1;
 	arr = malloc(buff * 8);
-	if (!arr)
+	if (!(arr && s))
 		return (0);
 	while (*(s + i))
 	{
