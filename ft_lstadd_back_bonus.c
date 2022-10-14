@@ -6,7 +6,7 @@
 /*   By: obednaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 09:31:52 by obednaou          #+#    #+#             */
-/*   Updated: 2022/10/14 14:46:16 by obednaou         ###   ########.fr       */
+/*   Updated: 2022/10/14 19:28:32 by obednaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,12 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*end;
 
-	if (!lst)
+	if (!(lst && new))
 		return ;
+	new->next = 0;
 	end = ft_lstlast(*lst);
 	if (!end)
-		return ;
-	end->next = new;
-	new->next = 0;
+		*lst = new;
+	else
+		end->next = new;
 }

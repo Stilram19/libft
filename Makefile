@@ -6,7 +6,7 @@
 #    By: obednaou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/10 13:36:21 by obednaou          #+#    #+#              #
-#    Updated: 2022/10/14 18:02:31 by obednaou         ###   ########.fr        #
+#    Updated: 2022/10/14 18:13:37 by obednaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,9 +55,9 @@ BONUS_SRCS	 = ft_lstnew_bonus.c\
 			   ft_lstiter_bonus.c\
 			   ft_lstmap_bonus.c
 
-BONUS_OBJS	= ${BONUS_SRCS: .c=.o}
+BONUS_OBJS	= ${BONUS_SRCS:.c=.o}
 
-OBJS	= ${SRCS: .c=.o}
+OBJS	= ${SRCS:.c=.o}
 NAME	= libft.a
 RM		= rm -f
 FLAGS	= -Wall -Wextra -Werror
@@ -75,7 +75,7 @@ clean:
 fclean: clean
 	${RM} ${NAME}
 
-bonus:
+bonus: all
 	${COMPILE} ${FLAGS} -c ${BONUS_SRCS}
 	ar cr ${NAME} ${BONUS_OBJS}
 	ranlib ${NAME}
