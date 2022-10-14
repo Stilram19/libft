@@ -6,7 +6,7 @@
 /*   By: obednaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 13:21:36 by obednaou          #+#    #+#             */
-/*   Updated: 2022/10/12 13:43:36 by obednaou         ###   ########.fr       */
+/*   Updated: 2022/10/14 10:38:46 by obednaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,15 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	needle_len = ft_strlen(needle);
 	if (!(*needle))
 		return ((char *)haystack);
-	while (i < len)
+	while (i < len && *(haystack + i))
 	{
-		if (needle_len + i <= len)
+		if (!ft_strncmp(haystack + i, needle, needle_len))
 		{
-			if (!ft_strncmp(haystack + i, needle, needle_len))
+			if (needle_len + i <= len)
 				return ((char *)haystack + i);
+			else
+				break ;
 		}
-		else
-			break ;
 		i++;
 	}
 	return (0);

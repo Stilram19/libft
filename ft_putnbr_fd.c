@@ -6,7 +6,7 @@
 /*   By: obednaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 16:47:19 by obednaou          #+#    #+#             */
-/*   Updated: 2022/10/12 15:06:03 by obednaou         ###   ########.fr       */
+/*   Updated: 2022/10/14 12:39:49 by obednaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (n >= 10)
 		ft_putnbr_fd(n / 10, fd);
-	ft_putchar_fd(n + 48, fd);
+	ft_putchar_fd(n % 10 + 48, fd);
 }

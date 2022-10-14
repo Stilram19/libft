@@ -6,7 +6,7 @@
 /*   By: obednaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 20:04:34 by obednaou          #+#    #+#             */
-/*   Updated: 2022/10/12 14:41:22 by obednaou         ###   ########.fr       */
+/*   Updated: 2022/10/14 11:36:38 by obednaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s + i);
 		i++;
 	}
-	if (!c)
+	if (!(char)c)
 		return ((char *)s + i);
 	return (0);
 }

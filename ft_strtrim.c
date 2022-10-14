@@ -6,7 +6,7 @@
 /*   By: obednaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 09:25:49 by obednaou          #+#    #+#             */
-/*   Updated: 2022/10/12 14:48:49 by obednaou         ###   ########.fr       */
+/*   Updated: 2022/10/14 13:31:54 by obednaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ static size_t	ft_last_proper_char(char const *s1, char const *set)
 {
 	size_t	i;
 
+	if (!ft_strlen(s1))
+		return (0);
 	i = ft_strlen(s1) - 1;
 	while ((i > 0) && ft_is_it_in_set(set, *(s1 + i)))
 			i--;
@@ -58,7 +60,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	start = ft_first_proper_char(s1, set);
 	end = ft_last_proper_char(s1, set);
-	if (start <= end)
+	if (start <= end && *s1)
 		ret = malloc(end - start + 2);
 	else
 		ret = malloc(1);

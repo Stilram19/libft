@@ -6,7 +6,7 @@
 #    By: obednaou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/10 13:36:21 by obednaou          #+#    #+#              #
-#    Updated: 2022/10/12 15:08:33 by obednaou         ###   ########.fr        #
+#    Updated: 2022/10/14 13:49:59 by obednaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,16 +45,27 @@ SRCS	= ft_isalpha.c \
 		  ft_putendl_fd.c \
 		  ft_putnbr_fd.c 
 
-OBJS	= ${SRCS:.c=.o}
+BONUS_SRCS	 = ft_lstnew.c\
+			   ft_lstadd_front.c\
+			   ft_lstsize.c\
+			   ft_lstlast.c\
+			   ft_lstadd_back.c\
+			   ft_lstdelone.c\
+			   ft_lstclear.c\
+			   ft_lstiter.c\
+			   ft_lstmap.c
+
+BONUS_OBJS	= ${BONUS_SRCS: .c=.o}
+
+OBJS	= ${SRCS: .c=.o}
 NAME	= libft.a
 RM		= rm -f
 FLAGS	= -Wall -Wextra -Werror
-CC		= cc
-LIBCR	= ar cr
+COMPILE		= cc
 
 ${NAME}:
-	${CC} ${FLAGS} -c ${SRCS}
-	${LIBCR} ${NAME} ${OBJS}
+	${COMPILE} ${FLAGS} -c ${SRCS}
+	ar cr ${NAME} ${OBJS}
 	ranlib ${NAME}
 all: ${NAME}
 
@@ -63,5 +74,10 @@ clean:
 
 fclean: clean
 	${RM} ${NAME}
+
+bonus:
+	${COMPILE} ${FLAGS} -c ${BONUS_SRCS}
+	ar cr ${NAME} ${BONUS_OBJS}
+	ranlib ${NAME}
 
 re: fclean all
