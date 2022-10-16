@@ -6,7 +6,7 @@
 /*   By: obednaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 16:21:59 by obednaou          #+#    #+#             */
-/*   Updated: 2022/10/14 18:05:18 by obednaou         ###   ########.fr       */
+/*   Updated: 2022/10/16 10:40:26 by obednaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# define LONG_LONG_MAX_STR "9223372036854775807"
 
 typedef struct s_list
 {

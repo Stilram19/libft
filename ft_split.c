@@ -6,7 +6,7 @@
 /*   By: obednaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 11:07:47 by obednaou          #+#    #+#             */
-/*   Updated: 2022/10/14 13:10:50 by obednaou         ###   ########.fr       */
+/*   Updated: 2022/10/16 13:51:37 by obednaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,48 +31,67 @@ static size_t	ft_arrlen(char const *s, char c)
 	return (size);
 }
 
-static char	*ft_assign(const char *s, char c)
+static void	free_the_heap(void	*ptr, size_t j)
 {
 	size_t	i;
-	char	*str;
 
 	i = 0;
-	while (*(s + i) && *(s + i) != c)
+	while (i < j)
+	{
+		free((void *)ptr + i);
 		i++;
+	}
+	free(ptr);
+}
+
+static char	*ft_allocate_word(char **arr, const char **s, char c, int j)
+{
+	size_t		i;
+	char		*str;
+	const char	*s1;
+
+	i = 0;
+	s1 = *s;
+	while (*(s1 + i) && *(s1 + i) != c)
+		i++;
+	*s = s1 + i;
 	str = malloc(i + 1);
+	if (!str)
+	{
+		free_the_heap(arr, j);
+		return (0);
+	}
 	*(str + i) = 0;
 	while (i > 0)
 	{
 		i--;
-		*(str + i) = *(s + i);
+		*(str + i) = *(s1 + i);
 	}
 	return (str);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	i;
 	size_t	j;
-	size_t	buff;
 	char	**arr;
 
-	i = 0;
 	j = 0;
-	buff = ft_arrlen(s, c) + 1;
-	arr = malloc(buff * 8);
-	if (!(arr && s))
+	if (!s)
 		return (0);
-	while (*(s + i))
+	arr = malloc((ft_arrlen(s, c) + 1) * sizeof(char *));
+	if (!arr)
+		return (0);
+	while (*s)
 	{
-		while (*(s + i) && *(s + i) == c)
-			i++;
-		if (*(s + i))
+		while (*s && *s == c)
+			s++;
+		if (*s)
 		{
-			*(arr + j) = ft_assign(s + i, c);
+			*(arr + j) = ft_allocate_word(arr, &s, c, j);
+			if (!*(arr + j))
+				return (0);
 			j++;
 		}
-		while (*(s + i) && *(s + i) != c)
-			i++;
 	}
 	*(arr + j) = 0;
 	return (arr);
