@@ -50,8 +50,8 @@ COMPILE = cc
 
 ${NAME}:
 	${COMPILE} ${FLAGS} -c ${SRCS}
-	ar cr ${NAME} ${OBJS}
-	ranlib ${NAME}
+	ar crs ${NAME} ${OBJS}
+
 all: ${NAME}
 
 clean:
@@ -62,7 +62,6 @@ fclean: clean
 
 bonus: all
 	${COMPILE} ${FLAGS} -c ${BONUS_SRCS}
-	ar cr ${NAME} ${BONUS_OBJS}
-	ranlib ${NAME}
+	ar crs ${NAME} ${BONUS_OBJS}
 
 re: fclean all

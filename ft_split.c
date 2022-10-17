@@ -6,7 +6,7 @@
 /*   By: obednaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 11:07:47 by obednaou          #+#    #+#             */
-/*   Updated: 2022/10/16 14:51:10 by obednaou         ###   ########.fr       */
+/*   Updated: 2022/10/16 17:09:40 by obednaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,8 @@ static size_t	ft_arrlen(char const *s, char c)
 
 static void	free_the_heap(void	*ptr, size_t j)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < j)
-	{
-		free((void *)ptr + i);
-		i++;
-	}
+	while (j--)
+		free((void *)ptr + j);
 	free(ptr);
 }
 
