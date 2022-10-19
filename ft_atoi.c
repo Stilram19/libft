@@ -58,7 +58,7 @@ int	ft_atoi(const char *str)
 	if (ft_digits_count(str) > 19)
 		return (handling_big_numbers(sign));
 	if (ft_digits_count(str) == 19
-		&& ft_strncmp(LONG_LONG_MAX_STR, str, 19) <= 0)
+		&& ft_strncmp(LONG_LONG_MAX_STR, str, 19) < 0)
 		return (handling_big_numbers(sign));
 	while (*str >= 48 && *str <= 57)
 	{

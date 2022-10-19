@@ -6,7 +6,7 @@
 /*   By: obednaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 11:07:47 by obednaou          #+#    #+#             */
-/*   Updated: 2022/10/16 17:09:40 by obednaou         ###   ########.fr       */
+/*   Updated: 2022/10/18 14:57:18 by obednaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static char	*ft_allocate_word(char **arr, const char **s, char c, int j)
 	while (*(s1 + i) && *(s1 + i) != c)
 		i++;
 	*s = s1 + i;
-	str = malloc(i + 1);
+	str = malloc((i + 1) * sizeof(char));
 	if (!str)
 	{
 		free_the_heap(arr, j);

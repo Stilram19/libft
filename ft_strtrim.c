@@ -6,7 +6,7 @@
 /*   By: obednaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 09:25:49 by obednaou          #+#    #+#             */
-/*   Updated: 2022/10/16 16:26:00 by obednaou         ###   ########.fr       */
+/*   Updated: 2022/10/19 19:30:44 by obednaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,14 +58,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1)
 		return (0);
 	if (!set)
-		return ((char *)s1);
+		return ((char *)ft_strdup(s1));
 	i = -1;
 	start = ft_first_proper_char(s1, set);
 	end = ft_last_proper_char(s1, set);
 	if (start <= end && *s1)
-		ret = malloc(end - start + 2);
+		ret = malloc((end - start + 2) * sizeof(char));
 	else
-		ret = malloc(1);
+		ret = malloc(sizeof(char));
 	if (!ret)
 		return (0);
 	while (++i + start <= end)

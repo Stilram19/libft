@@ -40,7 +40,7 @@ char	*ft_itoa(int n)
 	int		i;
 
 	i = ft_digits_count(n);
-	ret = malloc(i + 1);
+	ret = malloc((i + 1) * sizeof(char));
 	if (!ret)
 		return (0);
 	if (n < 0)

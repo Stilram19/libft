@@ -6,7 +6,7 @@
 /*   By: obednaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 11:06:24 by obednaou          #+#    #+#             */
-/*   Updated: 2022/10/16 16:53:58 by obednaou         ###   ########.fr       */
+/*   Updated: 2022/10/18 08:54:47 by obednaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_lst;
 	t_list	*new_lst_temp;
 
-	if (!(lst && f))
+	if (!(lst && f && del))
 		return (0);
 	new_lst_temp = ft_lstnew((*f)(lst->content));
 	new_lst = new_lst_temp;
