@@ -60,5 +60,5 @@ and my_program with your program name.
 [pointers](https://en.wikipedia.org/wiki/Pointer_(computer_programming))  
 [Endianness](https://en.wikipedia.org/wiki/Endianness)  
 [Pointer arithmetic](https://www.geeksforgeeks.org/pointer-arithmetics-in-c-with-examples/)  
-[two's complement](https://en.wikipedia.org/wiki/Two%27s_complement)
+[two's complement](https://en.wikipedia.org/wiki/Two%27s_complement)    
 [integer promotion](https://www.geeksforgeeks.org/integer-promotions-in-c/)
