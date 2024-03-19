@@ -15,7 +15,7 @@ To use the library in your c projects, follow these steps:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/Stilram19/libft.git
+   git clone git@github.com:Stilram19/libft.git
    ```
 
 2. Navigate to the repository's directory:
@@ -61,3 +61,4 @@ and my_program with your program name.
 [Endianness](https://en.wikipedia.org/wiki/Endianness)  
 [Pointer arithmetic](https://www.geeksforgeeks.org/pointer-arithmetics-in-c-with-examples/)  
 [two's complement](https://en.wikipedia.org/wiki/Two%27s_complement)
+[integer promotion](https://www.geeksforgeeks.org/integer-promotions-in-c/)
