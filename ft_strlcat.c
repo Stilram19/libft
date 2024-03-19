@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+// @brief appends the NUL-terminated string src to the end of dest. 
+// It will append at most dstsize - strlen(dst) - 1 bytes, NUL-terminating the result
+// @param dstsize is the whole buffer size not the length of dest
 size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 {
 	size_t	i;

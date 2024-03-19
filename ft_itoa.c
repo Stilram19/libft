@@ -34,6 +34,7 @@ static int	ft_digits_count(int n)
 	return (count);
 }
 
+// @brief converts the input integer into a string
 char	*ft_itoa(int n)
 {
 	char	*ret;
@@ -42,12 +43,12 @@ char	*ft_itoa(int n)
 	i = ft_digits_count(n);
 	ret = malloc((i + 1) * sizeof(char));
 	if (!ret)
-		return (0);
+		return (NULL);
 	if (n < 0)
 		*ret = 45;
 	if (!n)
 		*ret = 48;
-	*(ret + i) = 0;
+	*(ret + i) = '\0';
 	while (n)
 	{
 		i--;

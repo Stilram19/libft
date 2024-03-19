@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+// @brief allocates memory for a new node, construct it with content
+// in the content field, and NULL in the next field.
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*head;

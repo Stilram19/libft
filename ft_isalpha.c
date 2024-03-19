@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// @brief is c within the alphabetic ASCII ranges
 int	ft_isalpha(int c)
 {
 	if ((c >= 97 && c <= 122)

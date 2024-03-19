@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+// @param s pointer to the memory block to be cleared
+// @param n number of bytes to be cleared, starting from the address s.
+// @brief clears n bytes, starting from the address s
 void	ft_bzero(void *s, size_t n)
 {
 	while (n--)

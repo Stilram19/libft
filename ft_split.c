@@ -64,6 +64,8 @@ static char	*ft_allocate_word(char **arr, const char **s, char c, int j)
 	return (str);
 }
 
+// @brief splits the given string with the character c
+// @param c the separator
 char	**ft_split(char const *s, char c)
 {
 	size_t	j;

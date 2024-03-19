@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+// @brief my re_implementation of calloc
+// @param count number of memory blocks
+// @param size the size of each memory block
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ret;

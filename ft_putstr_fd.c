@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+// @brief writes the string s to the file open with the fd file descriptor
 void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s)

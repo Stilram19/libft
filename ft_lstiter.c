@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+// @brief applies the f method to each node's content (data field)
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!f)

@@ -25,9 +25,9 @@ static size_t	ft_digits_count(const char *str)
 	size_t	count;
 
 	count = 0;
-	while (*str == 48)
+	while (*str == '0')
 		str++;
-	while (*str <= 57 && *str >= 48)
+	while (*str <= '9' && *str >= '0')
 	{
 		count++;
 		str++;
@@ -42,6 +42,7 @@ static int	handling_big_numbers(int sign)
 	return (0);
 }
 
+// @brief converts the input string to integer
 int	ft_atoi(const char *str)
 {
 	int		ret;
@@ -50,9 +51,9 @@ int	ft_atoi(const char *str)
 	ret = 0;
 	sign = 1;
 	str = ft_skip_spaces(str);
-	if (*str == 43 || *str == 45)
+	if (*str == '+' || *str == '-')
 	{
-		if (*str++ == 45)
+		if (*str++ == '-')
 			sign = -1;
 	}
 	if (ft_digits_count(str) > 19)
@@ -60,10 +61,10 @@ int	ft_atoi(const char *str)
 	if (ft_digits_count(str) == 19
 		&& ft_strncmp(LONG_LONG_MAX_STR, str, 19) < 0)
 		return (handling_big_numbers(sign));
-	while (*str >= 48 && *str <= 57)
+	while (*str >= '0' && *str <= '9')
 	{
 		ret *= 10;
-		ret += *str - 48;
+		ret += *str - '0';
 		str++;
 	}
 	return (sign * ret);

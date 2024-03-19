@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+// @brief returns a copy of the given string in another place of memory
 char	*ft_strdup(const char *s1)
 {
 	size_t	i;
@@ -20,8 +21,8 @@ char	*ft_strdup(const char *s1)
 	i = ft_strlen(s1);
 	copy = malloc((i + 1) * sizeof(char));
 	if (!copy)
-		return (0);
-	*(copy + i) = 0;
+		return (NULL);
+	*(copy + i) = '\0';
 	while (i--)
 		*(copy + i) = *(s1 + i);
 	return (copy);

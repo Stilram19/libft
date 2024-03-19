@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+// @brief joins the two strings into a new place in memory
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	i;

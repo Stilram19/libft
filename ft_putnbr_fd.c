@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+// @brief writes the number n to the file open with the fd file descriptor
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n < 0)

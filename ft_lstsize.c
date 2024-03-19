@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+// @brief calculates the size of the given linked list.
+// make sure the input is the head of the linked list.
 int	ft_lstsize(t_list *lst)
 {
 	int	nodes_count;

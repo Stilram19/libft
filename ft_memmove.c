@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+// copies 'count' characters from dest to dest, but for overlapping memory blocks, 
+// ft_memmove() is a safer approach than ft_memcpy().
 void	*ft_memmove(void *dest, const void *src, size_t count)
 {
 	if (dest < src)

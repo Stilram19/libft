@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+// @brief @brief copies 'count' characters from memory area src to memory area dest.
 void	*ft_memcpy(void *dest, const void *src, size_t count)
 {
 	size_t	i;

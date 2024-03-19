@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+// @brief inserts a new element at the back of the linked list
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*end;

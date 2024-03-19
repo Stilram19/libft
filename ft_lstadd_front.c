@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+// @brief inserts a new element at the front of the linked list
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!(new && lst))

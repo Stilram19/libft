@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+// @brief writes the c character to the file open with the fd file descriptor
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);

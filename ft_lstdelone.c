@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+// @brief applies the del starategy to the given node's content (data field)
+// and then frees the node's allocated memory
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
 	if (!(lst && del))

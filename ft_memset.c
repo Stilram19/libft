@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+// @brief opies the character c (an unsigned char) 
+// to the first 'count' characters of the string pointed to, by the argument dest.
 void	*ft_memset(void *dest, int c, size_t count)
 {
 	size_t	i;

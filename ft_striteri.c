@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+// @brief applies the function f to all the characters of the string s
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	size_t	i;

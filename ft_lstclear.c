@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+// @brief applies the del strategy to each linked list node's content (data field), and frees
+// the memory allocated for the node.
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*head;
@@ -26,5 +28,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		ft_lstdelone(head, del);
 		head = next_temp;
 	}
-	*lst = 0;
+	*lst = NULL;
 }

@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+// @brief is c within the alphabetic or numeric ASCII ranges
 int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) || ft_isdigit(c))

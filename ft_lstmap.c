@@ -12,13 +12,16 @@
 
 #include "libft.h"
 
+// @brief maps the content of each node of the given list to another
+// creating a new list.
+// @return the new created list
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;
 	t_list	*new_lst_temp;
 
 	if (!(lst && f && del))
-		return (0);
+		return (NULL);
 	new_lst_temp = ft_lstnew((*f)(lst->content));
 	new_lst = new_lst_temp;
 	lst = lst->next;

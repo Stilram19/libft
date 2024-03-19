@@ -12,10 +12,11 @@
 
 #include "libft.h"
 
+// @brief returns the last node's address
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
-		return (0);
+		return (NULL);
 	while (lst->next)
 		lst = lst->next;
 	return (lst);

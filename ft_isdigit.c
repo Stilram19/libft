@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// @brief is c within the numeric ASCII range
 int	ft_isdigit(int c)
 {
 	if (c <= 57 && c >= 48)
