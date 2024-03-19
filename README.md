@@ -1,8 +1,22 @@
 # 42_LIBFT
 
-This project provides a library of re-implemented 43 functions from the C standard library.
-It is the first project in 42-cursus.
-This is the [subject](https://cdn.intra.42.fr/pdf/pdf/117032/en.subject.pdf)
+# 42_LIBFT
+
+## About
+
+This project provides a library of re-implemented 43 functions from the C standard library. It is the first project in 42-cursus. Here is the link to the [subject](https://cdn.intra.42.fr/pdf/pdf/117032/en.subject.pdf)
+
+## What I learned from this project:
+
+During the development of this project, I've learned several important concepts including:
+
+- **Core concepts**: Pointers, Pointer Arithmetic (increment, decrement, arithmetic step size), Integer  promotion, endianness, two's complement, ASCII encoding, typecasting, integers memory representation (2's complement)                               
+- **Memory Management**: Learned about dynamic memory allocation and deallocation, essential for creating robust and efficient c software.
+- **Makefile**: first time using Makefile to automate the compilation process and manage dependencies.
+- **Git**: Using git to commit and push to github or the 42-intra vogsphere
+- **Documentation**: Practiced writing clear and informative documentation, such as this README.md file, to aid users and contributors.
+- **Minimalist mindset**: I started developing this mentality, since we have to code everything from scratch,
+and we're only allowed to use write, malloc as external functions.
 
 # my_42_project
 
@@ -10,7 +24,7 @@ This is the [subject](https://cdn.intra.42.fr/pdf/pdf/117032/en.subject.pdf)
 
 ## Installation and Usage
 
-To use the library in your c projects, follow these steps:
+To use the library in your C projects, follow the installation and usage instructions provided below.
 
 1. Clone the repository to your local machine:
 
