@@ -12,13 +12,14 @@
 
 #include "libft.h"
 
+// @brief applies the function f to all the characters of the string s
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t	i;
 	char	*new_s;
 
 	if (!(s && f))
-		return (0);
+		return (NULL);
 	i = ft_strlen(s);
 	new_s = malloc((i + 1) * sizeof(char));
 	if (!new_s)

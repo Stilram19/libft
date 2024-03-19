@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// @brief returns the low case ACSII encoding of the input alphabet
+// if it is an upper case letter, otherwise it returns it.
 int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)

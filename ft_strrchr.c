@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+# include "libft.h"
+
+// @brief returns the address of the last occurrence of the character c in the s
+// or NULL if no occurrence detected.
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
@@ -23,5 +27,5 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *)s + i);
 		i--;
 	}
-	return (0);
+	return (NULL);
 }

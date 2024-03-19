@@ -13,6 +13,8 @@
 #include "libft.h"
 #include <stdio.h>
 
+// @brief returns a sub string from the original string.
+// the returned string is in a another place of memory
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;

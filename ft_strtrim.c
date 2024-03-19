@@ -48,6 +48,8 @@ static size_t	ft_last_proper_char(char const *s1, char const *set)
 	return (i);
 }
 
+// @brief trims the input string
+// @param set the set of characters to delete from start and end.
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;

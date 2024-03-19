@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+// @brief locate a substring (needle) in a string (haystack)
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
@@ -27,10 +28,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		{
 			if (needle_len + i <= len)
 				return ((char *)haystack + i);
-			else
-				break ;
+			break ;
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
