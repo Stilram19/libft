@@ -66,7 +66,7 @@ Here is an example:
 ```bash
 gcc -o my_program my_program.c -L/path/to/libft -lft
 ```
-replace /path/to/libft with the path of libft.a,
+replace /path/to/libft with the path of directory where libft.a is,
 and my_program with your program name.
 
 ## Concepts you cannot do without (for students):
