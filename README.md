@@ -10,7 +10,7 @@ This project provides a library of re-implemented 43 functions from the C standa
 
 During the development of this project, I've learned several important concepts including:
 
-- **Core concepts**: Pointers, Pointer Arithmetic (increment, decrement, arithmetic step size), Integer  promotion, endianness, two's complement, ASCII encoding, typecasting, integers memory representation (2's complement)                               
+- **Core concepts**: Stack frame(call stack), Pointers, Pointer Arithmetic (increment, decrement, arithmetic step size), Integer  promotion, endianness, two's complement, ASCII encoding, typecasting, integers memory representation (2's complement)                               
 - **Memory Management**: Learned about dynamic memory allocation and deallocation, essential for creating robust and efficient c software.
 - **Makefile**: first time using Makefile to automate the compilation process and manage dependencies.
 - **Git**: Using git to commit and push to github or the 42-intra vogsphere
@@ -71,6 +71,7 @@ and my_program with your program name.
 
 ## Concepts you cannot do without (for students):
 
+- [stack frame](https://en.wikipedia.org/wiki/Call_stack)
 - [pointers](https://en.wikipedia.org/wiki/Pointer_(computer_programming))  
 - [Endianness](https://en.wikipedia.org/wiki/Endianness)  
 - [Pointer arithmetic](https://www.geeksforgeeks.org/pointer-arithmetics-in-c-with-examples/)  
