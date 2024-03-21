@@ -1,7 +1,5 @@
 # 42_LIBFT
 
-# 42_LIBFT
-
 ## About
 
 This project provides a library of re-implemented 43 functions from the C standard library. It is the first project in 42-cursus. Here is the link to the [subject](https://cdn.intra.42.fr/pdf/pdf/117032/en.subject.pdf)
